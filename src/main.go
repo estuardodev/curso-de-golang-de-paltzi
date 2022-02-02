@@ -2,26 +2,44 @@ package main
 
 import "fmt"
 
-func main() {
-	// Declaracion de variables
-	helloMenssage := "Hello"
-	worldMenssage := "World"
+func helloFunction(message string) {
 
-	// Println
-	fmt.Println(helloMenssage, worldMenssage)
-	fmt.Println(helloMenssage, worldMenssage)
-
-	// Printf
-	nombre := "Platzi"
-	cursos := 700
-	fmt.Printf("%s tiene mas de %d cursos\n", nombre, cursos)
-	fmt.Printf("%v tiene mas de %v cursos\n", nombre, cursos)
-
-	// Sprintf
-	message := fmt.Sprintf("%s tiene mas de %d cursos", nombre, cursos)
 	fmt.Println(message)
 
-	//Tipos de datos
-	fmt.Printf("helloMessage: %T\n", helloMenssage)
-	fmt.Printf("cursos: %T\n", cursos)
+}
+
+func tripeArgument(a, b int, c string) {
+	fmt.Println(a, b, c)
+}
+
+func returnValue(a int) int {
+	return a * 2
+}
+
+func doubleReturn(a int) (c, d int) {
+	return a, a * 2
+}
+
+// RETO DE LA CLASE
+func areaRectangulo(base, altura int) int {
+	var resultado int = (base * altura) / 2
+
+	return resultado
+}
+
+func main() {
+	//Funciones
+	helloFunction("Hola Mundo")
+	tripeArgument(1, 2, "Hola")
+
+	value := returnValue(2)
+	fmt.Println("Value: ", value)
+
+	value1, _ := doubleReturn(2)
+	fmt.Println("value1: ", value1)
+
+	// RETO DE LA CLASE
+	respuesta := areaRectangulo(10, 10)
+	fmt.Println("El area del rectangulo es: ", respuesta)
+
 }
