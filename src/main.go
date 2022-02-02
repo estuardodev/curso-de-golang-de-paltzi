@@ -1,63 +1,27 @@
 package main
 
-import (
-	"fmt"
-	"math"
-)
+import "fmt"
 
 func main() {
-	//Operadores aritmeticos
-	x := 10
-	y := 50
+	// Declaracion de variables
+	helloMenssage := "Hello"
+	worldMenssage := "World"
 
-	// SUMA
-	result := x + y
-	fmt.Println("SUMA ES: ", result)
+	// Println
+	fmt.Println(helloMenssage, worldMenssage)
+	fmt.Println(helloMenssage, worldMenssage)
 
-	// RESTA
-	result = y - x
-	fmt.Println("RESTA ES: ", result)
+	// Printf
+	nombre := "Platzi"
+	cursos := 700
+	fmt.Printf("%s tiene mas de %d cursos\n", nombre, cursos)
+	fmt.Printf("%v tiene mas de %v cursos\n", nombre, cursos)
 
-	// MULTIPLICACIÓN
-	result = x * y
-	fmt.Println("MULTIPLICACIÓN ES: ", result)
+	// Sprintf
+	message := fmt.Sprintf("%s tiene mas de %d cursos", nombre, cursos)
+	fmt.Println(message)
 
-	// DIVISIÓN
-	result = y / x
-	fmt.Println("DIVISIÓN ES: ", result)
-
-	// MODULO o RESIDUO
-	result = y % x
-	fmt.Println("MODULO ES: ", result)
-
-	// INCREMENTAR
-	x++
-	fmt.Println("INCREMENTAR ES: ", x)
-
-	// DECREMENTAR
-	x--
-	fmt.Println("DECREMENTAR ES: ", x)
-
-	// RETO DE LA CLASE
-	// Encontrar el area de un rectangulo, trapecio y de un circulo
-
-	// Rectangulo
-	baseRec := 20
-	altRec := 30
-	result = baseRec * altRec / 2
-	fmt.Println("El area de un rectangulo es: ", result)
-
-	// Trapecio
-	baseMenor := 5
-	baseMayor := 10
-	altTra := 6
-	result = (baseMayor + baseMenor) * altTra / 2
-	fmt.Println("El area de un Trapecio es de: ", result)
-
-	// Circulo
-	// Tuve que buscar ayuda para resolver este problema
-	radio := 10
-	results := math.Pi * math.Pow(float64(radio), 2)
-
-	fmt.Println("El area del circulo es: ", results)
+	//Tipos de datos
+	fmt.Printf("helloMessage: %T\n", helloMenssage)
+	fmt.Printf("cursos: %T\n", cursos)
 }
